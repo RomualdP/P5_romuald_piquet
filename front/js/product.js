@@ -13,7 +13,8 @@ let id = url.searchParams.get("id");
   }) ()
 
 
-// // fonction qui retourne la promesse de l'API
+// Fonction simplifiée ci-dessus
+// fonction qui retourne la promesse de l'API
 // function productSpecList () {
 //     return fetch("http://localhost:3000/api/products/"+ id )
 //       .then(function(res) {
@@ -70,12 +71,11 @@ function addProduct() {
       existingProducts.push(product);
     }
   }
-  console.log(existingProducts)
-  // console.log(existingProducts)
-  // localStorage.setItem("allProducts", JSON.stringify(existingProducts));
   save ("allProducts", existingProducts)
 };
 
+let productStored = load("allProducts")
+console.log(productStored)
 // function storageReset () {
 //   localStorage.clear()
 // }
