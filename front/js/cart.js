@@ -20,7 +20,7 @@ async function displayCart(product) {
     // console.log(productDataByID.imageUrl);
     cloneEl.getElementById("name").textContent = productDataByID.name;
     cloneEl.getElementById("price").textContent = productDataByID.price;
-    // cloneEl.getElementById("productImg").src = productDataByID.imageUrl;
+    cloneEl.getElementById("productImg").src = String(productDataByID.imageUrl);
     cloneEl.getElementById("color").textContent = product.Color;
     cloneEl.getElementById("quantity").value = product.Quantity;
     document.getElementById("cart__items").appendChild(cloneEl)
