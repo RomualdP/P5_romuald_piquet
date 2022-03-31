@@ -101,7 +101,7 @@ function changeQuantity() {
   save("allProducts", productInCart);
   reload(); // appel de la fonction de reload pour l'affichage dynamique
 }
-console.log(productInCart)
+
 // fonction de suppression de l'article dans le localStorage et suppression dans l'affichage via remove()
 function deleteProduct() {
   let productInCart = load("allProducts");
