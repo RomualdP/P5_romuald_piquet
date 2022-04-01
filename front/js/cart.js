@@ -203,6 +203,7 @@ function formCheck() {
 async function fetchPost(key) {
   let response = await fetch("http://localhost:3000/api/products/order", {
     method: "POST",
+    mode: 'cors',
     headers: {
       "Content-Type": "application/json",
     },
