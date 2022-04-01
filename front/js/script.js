@@ -1,7 +1,12 @@
 // Fonction qui récupère les données d'une API selon l'adresse fournie. exportée pour être utilisée sur les autres modules
 
 export async function productList(url) {
-  const response = await fetch(url);
+  const response = await fetch(url, { method: 'GET',
+  headers: {
+    "Accept": "application/json",
+    "Content-Type": "application/json"
+    },
+  mode: 'cors'});
   const data = await response.json();
   return data;
 }
